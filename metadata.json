@@ -1,0 +1,6 @@
+{
+  "name": "Idara-e-Tahqeeqat-e-Imam Ahmed Raza",
+  "description": "Official portal of Idara-e-Tahqeeqat-e-Imam Ahmed Raza (ITIAR). Founded in 1980, dedicated to authentic research, peer-reviewed publications, and annual international conferences.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

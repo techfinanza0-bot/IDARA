@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Source Serif 4", "Source Serif Pro", Georgia, serif;
+  --font-serif: "Source Serif 4", "Source Serif Pro", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  /* itiar.com official Blocksy theme palette */
+  --color-itiar-sand: #a0876e;
+  --color-itiar-sand-hover: #8b735c;
+  --color-itiar-green: #288a61;
+  --color-itiar-green-hover: #1f6f4e;
+  --color-itiar-dark: #191919;
+  --color-itiar-noir: #0f0e17;
+  --color-itiar-body: #3f4245;
+  --color-itiar-heading: #020404;
+  --color-itiar-border: #eaeaec;
+  --color-itiar-muted: #f4f4f5;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #3f4245;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: #020404;
+}
+
+/* Print and readability */
+@media print {
+  header, footer, button {
+    display: none !important;
+  }
+}
+
+/* Subtle Ken Burns Animation Effect */
+@keyframes kenburns-slow {
+  0% {
+    transform: scale(1.0) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-1.2%, -0.8%);
+  }
+  100% {
+    transform: scale(1.03) translate(0.8%, -0.4%);
+  }
+}
+
+@keyframes kenburns-reverse {
+  0% {
+    transform: scale(1.08) translate(-1%, -1%);
+  }
+  50% {
+    transform: scale(1.02) translate(1%, 0.5%);
+  }
+  100% {
+    transform: scale(1.0) translate(0, 0);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenburns-slow 22s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+  will-change: transform;
+}
+
+.animate-ken-burns-reverse {
+  animation: kenburns-reverse 24s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+  will-change: transform;
+}
